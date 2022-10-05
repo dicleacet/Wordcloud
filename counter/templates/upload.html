@@ -1,0 +1,13 @@
+<form method="post" style="text-align: center" enctype="multipart/form-data">
+  <h1>Wordcloud</h1>
+  {% csrf_token %}
+  <input type="file" name="myfile">
+  <button type="submit">Upload</button>
+  <br/> <br/>
+  {% for key, value in data.items %}
+    {{ key }} {{ value }}<hr>
+
+  {% endfor %}
+</form>
+
+
